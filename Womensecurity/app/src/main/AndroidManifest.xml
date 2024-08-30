@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.womensecurity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18"
+        tools:ignore="ExpiredTargetSdkVersion,GradleOverrides" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.womensecurity.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            tools:ignore="RedundantLabel">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.womensecurity.Register"
+            android:label="@string/title_activity_register"
+            android:parentActivityName="com.example.womensecurity.MainActivity"
+            tools:targetApi="jelly_bean">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.womensecurity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.womensecurity.Display"
+            android:label="@string/title_activity_display"
+            android:parentActivityName="com.example.womensecurity.MainActivity"
+            tools:targetApi="jelly_bean">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.womensecurity.MainActivity" />
+        </activity>
+        <service android:name="com.example.womensecurity.BgService" />
+        <activity
+            android:name="com.example.womensecurity.Instructions"
+            android:label="@string/title_activity_instructions"
+            android:parentActivityName="com.example.womensecurity.MainActivity"
+            tools:targetApi="jelly_bean">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.womensecurity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.womensecurity.Verify"
+            android:label="@string/title_activity_verify"
+            android:parentActivityName="com.example.womensecurity.MainActivity"
+            tools:targetApi="jelly_bean">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.womensecurity.MainActivity" />
+        </activity>
+    </application>
+</manifest>
